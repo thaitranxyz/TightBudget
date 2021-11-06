@@ -20,32 +20,32 @@
             <div class="col">
                 <div>
                     <label class="control-label">Item</label>
-                    <input class="form-control" asp-for="BudgetAdd.Item" />
+                    <input class="form-control" asp-for="BudgetInput.Item" />
                 </div>
             </div>
 
             <div class="col">
                 <label class="control-label">Category</label>
-                <select class="form-control" asp-for="BudgetAdd.Category" asp-items="@Html.GetEnumSelectList<TightBudget.Entities.Category>()">
+                <select class="form-control" asp-for="BudgetInput.Category" asp-items="@Html.GetEnumSelectList<TightBudget.Entities.Category>()">
                     <option value="">--Select Category--</option>
                 </select>
-                <span asp-validation-for="BudgetAdd.Category" class="text-danger"></span>
+                <span asp-validation-for="BudgetInput.Category" class="text-danger"></span>
             </div>
 
             <div class="col">
                 <label class="control-label">Price</label>
-                <input class="form-control" asp-for="BudgetAdd.Price" />
-                <span asp-validation-for="BudgetAdd.Category" class="text-danger"></span>
+                <input class="form-control" asp-for="BudgetInput.Price" />
+                <span asp-validation-for="BudgetInput.Category" class="text-danger"></span>
             </div>
 
             <div class="col">
                 <label class="control-label">Description</label>
-                <input class="form-control" asp-for="BudgetAdd.Description" />
+                <input class="form-control" asp-for="BudgetInput.Description" />
             </div>
 
             <div class="col">
                 <label class="control-label">Date</label>
-                <input class="form-control" asp-for="BudgetAdd.Date" />
+                <input class="form-control" asp-for="BudgetInput.Date" />
             </div>
         </div>
         <div class="d-flex">

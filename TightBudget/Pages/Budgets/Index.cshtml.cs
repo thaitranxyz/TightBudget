@@ -21,7 +21,7 @@ namespace TightBudget.Pages.Budgets
 
         public IList<Budget> Budget { get; set; }
         [BindProperty]
-        public Budget BudgetAdd { get; set; }
+        public Budget BudgetInput { get; set; }
 
         public async Task OnGetAsync(string searchString, string sortOrder)
         {
@@ -66,7 +66,7 @@ namespace TightBudget.Pages.Budgets
                 return RedirectToPage("./Index");
             }
 
-            _context.Budget.Add(BudgetAdd);
+            _context.Budget.Add(BudgetInput);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
